@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --bgBeige: 243, 243, 241, 1;
+        --bgBlack: 38, 38, 37.1;
+        --bgWhite: 254, 254, 254, 1;
+        --blueLight: 186, 218, 255, 1;
+        --blueDark: 107, 147, 192, 1;
+        --greenLight: 236, 255, 206, 1;
+        --greenMid: 162, 184, 126, 1;
+        --greenDark: 149, 174, 109, 1;
+        --mustardLight: 255, 250, 194, 1;
+        --mustardMid: 202, 196, 142, 1;
+        --mustardDark: 194, 187, 130, 1;
+        --orangeLight: 255, 188, 171, 1;
+        --orangeMid: 242, 129, 100, 1;
+        --orangeDark: 212, 111, 85, 1;
+        --pinkLight: 255, 237, 245, 1;
+        --pinkMid: 245, 136, 185, 1;
+        --pinkDark: 214, 105, 154, 1;
+        --purpleLight: 235, 237, 255, 1;
+        --purpleMid: 159, 168, 254, 1;
+        --purpleDark: 138, 146, 227, 1;
+    }
+}
