@@ -30,6 +30,9 @@ const config: Config = {
                 "purpleMid": "rgba(var(--purpleMid))",
                 "purpleDark": "rgba(var(--purpleDark))",
             },
+            fontFamily: {
+                inter: ["Inter", "sans-serif"]
+            }
         },
     },
     plugins: [],
