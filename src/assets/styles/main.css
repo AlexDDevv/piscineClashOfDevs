@@ -1,0 +1,13 @@
+.switchTheme {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-0%, -50%);
+}
+
+.svgHover path{
+    transition: fill 0.2s ease-in-out;
+}
+.svgHover:hover path {
+    fill: rgba(38, 38, 37.1, 1)
+}
