@@ -11,3 +11,11 @@
 .svgHover:hover path {
     fill: rgba(38, 38, 37.1, 1)
 }
+
+.posGif {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-68%, -39%);
+    rotate: 12.63deg;
+}
