@@ -1,0 +1,38 @@
+{
+    "heroLinks": [
+        {
+            "classDiv": "flex absolute bottom-3 right-3",
+            "href": "https://x.com/LLCoolChris_",
+            "classLink": "bg-blueDark font-inter font-semibold text-xs text-bgWhite px-3 py-1.5 rounded-[2px_19px_19px_25px] shadow-[inset_0_0_0_2px_rgba(var(--blueDark))]",
+            "content": "@LLCoolChris",
+            "cursor": "/cursorChris.svg",
+            "classCursor": "absolute bottom-[28px] left-[-13px]"
+        },
+        {
+            "classDiv": "flex absolute bottom-[130px] right-0",
+            "href": "https://x.com/maislina_",
+            "classLink": "bg-orangeMid font-inter font-semibold text-xs text-bgWhite px-3 py-1.5 rounded-[2px_19px_19px_25px] shadow-[inset_0_0_0_2px_rgba(var(--orangeDark))]",
+            "content": "@maislina_",
+            "cursor": "/cursorLina.svg",
+            "classCursor": "absolute bottom-[28px] left-[-12px]"
+        },
+        {
+            "classDiv": "flex absolute bottom-9",
+            "href": "https://x.com/sometimecrea",
+            "classLink": "bg-pinkMid font-inter font-semibold text-xs text-bgWhite px-3 py-1.5 rounded-[19px_2px_25px_19px] shadow-[inset_0_0_0_2px_rgba(var(--pinkDark))]",
+            "content": "@sometimecrea",
+            "cursor": "/cursorSome.svg",
+            "classCursor": "absolute bottom-[28px] right-[-10px]"
+        }
+    ],
+    "easterEggLink": [
+        {
+            "classDiv": "flex absolute bottom-9",
+            "href": "https://x.com/Sport_DevWeb",
+            "classLink": "bg-purpleMid font-inter font-semibold text-xs text-bgWhite px-3 py-1.5 rounded-[19px_2px_25px_19px] shadow-[inset_0_0_0_2px_rgba(var(--purpleDark))]",
+            "content": "@Sport_DevWeb",
+            "cursor": "/cursorMoi.svg",
+            "classCursor": "absolute bottom-[28px] right-[-10px]"
+        }
+    ]
+}
