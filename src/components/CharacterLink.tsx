@@ -17,7 +17,7 @@ export default function CharacterLink({ href, linkClass, linkContent, cursor }: 
                 alt="Curseur"
                 width={12}
                 height={13}
-                className="absolute bottom-[25px] left-[-10px] h-auto w-auto"
+                className="absolute top-[-13px] left-[-9px] h-auto w-auto"
             />
         </div>
     )
