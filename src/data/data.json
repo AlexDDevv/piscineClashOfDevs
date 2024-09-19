@@ -231,5 +231,28 @@
             "logoWidth": 90,
             "logoHeight": 82
         }
+    ],
+    "logoCTA": [
+        {
+            "src": "/cta/asterisqueCTA.svg",
+            "alt": "Logo asterisque",
+            "width": 30,
+            "height": 30,
+            "class": "absolute top-[-15px] left-[-5px]"
+        },
+        {
+            "src": "/cta/baliseCTA.svg",
+            "alt": "Logo balise",
+            "width": 65,
+            "height": 65,
+            "class": "absolute top-[-40px] right-[-20px] -z-10"
+        },
+        {
+            "src": "/cta/flashCTA.svg",
+            "alt": "Logo flash",
+            "width": 39,
+            "height": 39,
+            "class": "absolute bottom-[-20px] right-[15px]"
+        }
     ]
 }
