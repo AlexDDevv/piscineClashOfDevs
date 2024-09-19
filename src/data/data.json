@@ -50,10 +50,14 @@
                 }
             ],
             "image": "/characters/artiste.png",
-            "firstStrong": "Le design,",
-            "firstContent": "c'est son terrain de jeu. Il maîtrise et retranscrit correctement chaque pixel de la maquette.",
-            "secondStrong": "Figma n'a aucun secret pour ce Dev de talent.",
-            "secondContent": "Virtuose des couleurs il ne se trompe jamais de code HEX, de spacing ou de border-radius ; ",
+            "firstContent": {
+                "bolder": "Le design, ",
+                "after": "c'est son terrain de jeu. Il maîtrise et retranscrit correctement chaque pixel de la maquette."
+            },
+            "secondContent": {
+                "before": "Virtuose des couleurs il ne se trompe jamais de code HEX, de spacing ou de border-radius ; ",
+                "bolder": "Figma n'a aucun secret pour ce Dev de talent."
+            }, 
             "logoClass": "h-[310px] w-[310px] rounded-full bg-purpleMid flex items-center justify-center",
             "logo": "/characters/logoArtiste.svg",
             "logoWidth": 100,
@@ -73,8 +77,15 @@
                 }
             ],
             "image": "/characters/batisseur.png",
-            "firstContent": "Ses lignes de code sont des fondations solides. C'est un maître du front, capable de structurer les systèmes les plus complexes sans se casser la tête.",
-            "secondContent": "Maitre de VSCode, il a surement fini le challenge en s'assurant d'avoir le code le plus clair et le plus propre des 36 participants.",
+            "firstContent": {
+                "before": "Ses lignes de code sont des fondations solides. C'est ",
+                "bolder": "un maître du front, ",
+                "after": "capable de structurer les systèmes les plus complexes sans se casser la tête."
+            },
+            "secondContent": {
+                "bolder": "Maitre de VSCode, ",
+                "after": "il a surement fini le challenge en s'assurant d'avoir le code le plus clair et le plus propre des 36 participants."
+            },
             "logoClass": "h-[310px] w-[310px] rounded-full bg-pinkMid flex items-center justify-center",
             "logo": "/characters/logoBatisseur.svg",
             "logoWidth": 127,
@@ -100,8 +111,16 @@
                 }
             ],
             "image": "/characters/fluide.png",
-            "firstContent": "Le design, c'est son terrain de jeu. <br /> Il maîtrise et retranscrit correctement chaque pixel de la maquette.",
-            "secondContent": "Virtuose des couleurs il ne se trompe jamais de code HEX, de spacing ou de border-radius ; Figma n'a aucun secret pour ce Dev de talent.",
+            "firstContent": {
+                "before": "Aucun composant ne s'affiche sans une ",
+                "bolder": "animation soignée",
+                "after": ". Ses transitions sont légères, dynamiques et fluides, captivant l'utilisateur à chaque interaction."
+            },
+            "secondContent": {
+                "before": "Ce dev a l'oeil et maitrise ",
+                "bolder": "le motion",
+                "after": " mieux que n'importe qui."
+            },
             "logoClass": "h-[310px] w-[310px] rounded-full bg-greenMid flex items-center justify-center",
             "logo": "/characters/logoFluide.svg",
             "logoWidth": 120,
@@ -127,8 +146,16 @@
                 }
             ],
             "image": "/characters/chercheur.png",
-            "firstContent": "Quelle que soit la taille de l'écran, il garantit une expérience utilisateur sans faille. Chaque site s'adapte à tous les supports, du mobile au grand écran.",
-            "secondContent": "Il fait attention à chaque breakpoint attentivement, on ne pourra pas le reprendre à l'inspection!",
+            "firstContent": {
+                "before": "Quelle que soit la taille de l'écran, il garantit une expérience utilisateur sans faille. Chaque site ",
+                "bolder": "s'adapte à tous les supports, ",
+                "after": "du mobile au grand écran."
+            },
+            "secondContent": {
+                "before": "Il fait attention à ",
+                "bolder": "chaque breakpoint ",
+                "after": "attentivement, on ne pourra pas le reprendre à l'inspection!"
+            },
             "logoClass": "h-[310px] w-[310px] rounded-full bg-blueDark flex items-center justify-center",
             "logo": "/characters/logoChercheur.svg",
             "logoWidth": 88,
@@ -154,8 +181,16 @@
                 }
             ],
             "image": "/characters/secrets.png",
-            "firstContent": "Derrière une ligne de code bien choisie se cache un secret bien gardé. Il glisse la surprise qui surprendra les utilisateurs les plus curieux.",
-            "secondContent": "Dev attentif aux comportements utilisateurs il saura cacher l'Easter Egg au meilleur endroit.",
+            "firstContent": {
+                "before": "Derrière une ligne de code bien choisie se cache un ",
+                "bolder": "secret bien gardé. ",
+                "after": "Il glisse la surprise qui surprendra les utilisateurs les plus curieux."
+            },
+            "secondContent": {
+                "before": "Dev attentif aux comportements utilisateurs il saura cacher l'",
+                "bolder": "Easter Egg ",
+                "after": "au meilleur endroit."
+            },
             "logoClass": "h-[310px] w-[310px] rounded-full bg-mustardMid flex items-center justify-center",
             "logo": "/characters/logoSecrets.svg",
             "logoWidth": 160,
@@ -181,8 +216,16 @@
                 }
             ],
             "image": "/characters/surBoosted.png",
-            "firstContent": "Il excelle dans tous les domaines, alliant design, propreté de code, réactivité, animations fluides et créativité cachée. Un vrai prodige qui a su briller dans chaque aspect du développement.",
-            "secondContent": "Ce dev aux multitalents a reçu la standing ovation du jury.",
+            "firstContent": {
+                "before": "Il excelle dans tous les domaines, alliant design, propreté de code, réactivité, animations fluides et créativité cachée. ",
+                "bolder": "Un vrai prodige ",
+                "after": "qui a su briller dans chaque aspect du développement."
+            },
+            "secondContent": {
+                "before": "Ce dev aux ",
+                "bolder": "multitalents ",
+                "after": "a reçu la standing ovation du jury."
+            },
             "logoClass": "h-[310px] w-[310px] rounded-full bg-orangeMid flex items-center justify-center",
             "logo": "/characters/logoSurBoosted.svg",
             "logoWidth": 90,
