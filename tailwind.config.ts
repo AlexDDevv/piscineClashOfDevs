@@ -31,6 +31,9 @@ const config: Config = {
                 "purpleMid": "rgba(var(--purpleMid))",
                 "purpleDark": "rgba(var(--purpleDark))",
             },
+            borderRadius: {
+                "roundedLink": "2px 19px 19px 25px"
+            },
             fontFamily: {
                 inter: ["Inter", "sans-serif"]
             }
