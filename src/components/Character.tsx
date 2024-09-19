@@ -1,39 +1,49 @@
 import Image from "next/image";
 import CharacterLink from "./CharacterLink";
 
-interface CharacterProps {
-    containerClass: string,
-    role: string,
-    point: string,
-    title: string,
-    link: {
-        href: string,
-        linkClass: string,
-        linkContent: string,
-        cursor: string
-    }[],
-    image: string,
-    firstContent: string,
-    secondContent: string,
-    logoClass: string,
-    logo: string,
-    logoWidth: number,
-    logoHeight: number
+interface ContentFragment {
+    before?: string;
+    bolder: string;
+    after?: string;
 }
 
-export default function Character({ containerClass, role, point, title, link, image, firstContent, secondContent, logoClass, logo, logoWidth, logoHeight }: CharacterProps) {
+interface CharacterProps {
+    containerClass: string;
+    role: string;
+    point: string;
+    title: string;
+    link: {
+        href: string;
+        linkClass: string;
+        linkContent: string;
+        cursor: string;
+    }[];
+    image: string;
+    firstContent: ContentFragment;
+    secondContent: ContentFragment;
+    logoClass: string;
+    logo: string;
+    logoWidth: number;
+    logoHeight: number;
+}
+
+export default function Character({
+    containerClass, role, point, title, link, image, firstContent, secondContent, logoClass, logo, logoWidth, logoHeight,
+}: CharacterProps) {
     return (
         <article className={containerClass}>
             <div className="flex justify-between pl-12 mb-14">
                 <div className="flex gap-x-[150px]">
                     <div>
-                        <p className="font-inter font-medium text-xs uppercase mb-1">{role}</p>
+                        <p className="font-inter font-medium text-xs uppercase mb-1">
+                            {role}
+                        </p>
                         <span className="font-inter font-medium text-xs">{point}</span>
                     </div>
                     <h3 className="font-inter font-bold text-xs uppercase">{title}</h3>
                 </div>
                 <div className="flex gap-x-8">
-                    {link.map(item => (
+                    {link.map((item) => (
                         <CharacterLink
                             key={item.linkContent}
                             href={item.href}
@@ -55,8 +65,16 @@ export default function Character({ containerClass, role, point, title, link, im
                     />
                 </div>
                 <div className="pt-7 max-w-60">
-                    <p className="font-inter font-medium text-xs leading-5 mb-8">{firstContent}</p>
-                    <p className="font-inter font-medium text-xs leading-5">{secondContent}</p>
+                    <p className="font-inter font-medium text-xs leading-5 mb-8">
+                        {firstContent.before}
+                        <strong>{firstContent.bolder}</strong>
+                        {firstContent.after}
+                    </p>
+                    <p className="font-inter font-medium text-xs leading-5">
+                        {secondContent.before}
+                        <strong>{secondContent.bolder}</strong>
+                        {secondContent.after}
+                    </p>
                 </div>
             </div>
             <div className="h-[412px] w-[412px] flex items-center justify-center absolute bottom-[-100px] right-[-85px]">
@@ -71,5 +89,5 @@ export default function Character({ containerClass, role, point, title, link, im
                 </div>
             </div>
         </article>
-    )
+    );
 }
