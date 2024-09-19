@@ -37,16 +37,14 @@
     ],
     "characters": [
         {
-            "containerBg": "purpleLight",
+            "containerClass": "bg-purpleLight text-bgBlack max-w-[1440px] mx-auto rounded-[60px] p-12 pt-16 relative overflow-hidden",
             "role": "Design",
             "point": "/6 pts",
             "title": "L'artiste de renom",
             "link": [
                 {
                     "href": "https://x.com/maislina_",
-                    "linkBg": "purpleMid",
-                    "linkColor": "bgWhite",
-                    "linkBorder": "--purpleDark",
+                    "linkClass": "bg-purpleMid font-inter font-semibold text-xs text-bgWhite px-3 py-1.5 rounded-roundedLink shadow-[inset_0_0_0_2px_rgba(var(--purpleDark))]",
                     "linkContent": "@maislina_",
                     "cursor": "/cursors/cursorArtiste.svg"
                 }
@@ -56,22 +54,20 @@
             "firstContent": "c'est son terrain de jeu. Il maîtrise et retranscrit correctement chaque pixel de la maquette.",
             "secondStrong": "Figma n'a aucun secret pour ce Dev de talent.",
             "secondContent": "Virtuose des couleurs il ne se trompe jamais de code HEX, de spacing ou de border-radius ; ",
-            "logoBg": "purpleMid",
+            "logoClass": "h-[310px] w-[310px] rounded-full bg-purpleMid flex items-center justify-center",
             "logo": "/characters/logoArtiste.svg",
             "logoWidth": 100,
             "logoHeight": 120
         },
         {
-            "containerBg": "pinkLight",
+            "containerClass": "bg-pinkLight text-bgBlack max-w-[1440px] mx-auto rounded-[60px] p-12 pt-16 relative overflow-hidden",
             "role": "Code",
             "point": "/6 pts",
             "title": "Le bâtisseur de code",
             "link": [
                 {
                     "href": "https://x.com/LLCoolChris_",
-                    "linkBg": "pinkMid",
-                    "linkColor": "bgWhite",
-                    "linkBorder": "--pinkDark",
+                    "linkClass": "bg-pinkMid font-inter font-semibold text-xs text-bgWhite px-3 py-1.5 rounded-roundedLink shadow-[inset_0_0_0_2px_rgba(var(--pinkDark))]",
                     "linkContent": "@Chris",
                     "cursor": "/cursors/cursorBatisseur.svg"
                 }
@@ -79,30 +75,26 @@
             "image": "/characters/batisseur.png",
             "firstContent": "Ses lignes de code sont des fondations solides. C'est un maître du front, capable de structurer les systèmes les plus complexes sans se casser la tête.",
             "secondContent": "Maitre de VSCode, il a surement fini le challenge en s'assurant d'avoir le code le plus clair et le plus propre des 36 participants.",
-            "logoBg": "pinkMid",
+            "logoClass": "h-[310px] w-[310px] rounded-full bg-pinkMid flex items-center justify-center",
             "logo": "/characters/logoBatisseur.svg",
             "logoWidth": 127,
             "logoHeight": 74
         },
         {
-            "containerBg": "greenLight",
+            "containerClass": "bg-greenLight text-bgBlack max-w-[1440px] mx-auto rounded-[60px] p-12 pt-16 relative overflow-hidden",
             "role": "Motion",
             "point": "/3 pts",
             "title": "Le maître de la fluidité",
             "link": [
                 {
                     "href": "https://x.com/maislina_",
-                    "linkBg": "greenMid",
-                    "linkColor": "bgWhite",
-                    "linkBorder": "--greenDark",
+                    "linkClass": "bg-greenMid font-inter font-semibold text-xs text-bgWhite px-3 py-1.5 rounded-roundedLink shadow-[inset_0_0_0_2px_rgba(var(--greenDark))]",
                     "linkContent": "@Lina",
                     "cursor": "/cursors/cursorFluide.svg"
                 },
                 {
                     "href": "https://x.com/LLCoolChris_",
-                    "linkBg": "greenMid",
-                    "linkColor": "bgWhite",
-                    "linkBorder": "--greenDark",
+                    "linkClass": "bg-greenMid font-inter font-semibold text-xs text-bgWhite px-3 py-1.5 rounded-roundedLink shadow-[inset_0_0_0_2px_rgba(var(--greenDark))]",
                     "linkContent": "@Chris",
                     "cursor": "/cursors/cursorFluide.svg"
                 }
@@ -110,30 +102,26 @@
             "image": "/characters/fluide.png",
             "firstContent": "Le design, c'est son terrain de jeu. <br /> Il maîtrise et retranscrit correctement chaque pixel de la maquette.",
             "secondContent": "Virtuose des couleurs il ne se trompe jamais de code HEX, de spacing ou de border-radius ; Figma n'a aucun secret pour ce Dev de talent.",
-            "logoBg": "greenMid",
+            "logoClass": "h-[310px] w-[310px] rounded-full bg-greenMid flex items-center justify-center",
             "logo": "/characters/logoFluide.svg",
             "logoWidth": 120,
             "logoHeight": 120
         },
         {
-            "containerBg": "blueLight",
+            "containerClass": "bg-blueLight text-bgBlack max-w-[1440px] mx-auto rounded-[60px] p-12 pt-16 relative overflow-hidden",
             "role": "Responsive",
             "point": "/2 pts",
             "title": "Le chercheur de breakpoint",
             "link": [
                 {
                     "href": "https://x.com/maislina_",
-                    "linkBg": "blueDark",
-                    "linkColor": "blueLight",
-                    "linkBorder": "--blueDark",
+                    "linkClass": "bg-blueDark font-inter font-semibold text-xs text-blueLight px-3 py-1.5 rounded-roundedLink shadow-[inset_0_0_0_2px_rgba(var(--blueDark))]",
                     "linkContent": "@Lina",
                     "cursor": "/cursors/cursorChercheur.svg"
                 },
                 {
                     "href": "https://x.com/LLCoolChris_",
-                    "linkBg": "blueDark",
-                    "linkColor": "blueLight",
-                    "linkBorder": "--blueDark",
+                    "linkClass": "bg-blueDark font-inter font-semibold text-xs text-blueLight px-3 py-1.5 rounded-roundedLink shadow-[inset_0_0_0_2px_rgba(var(--blueDark))]",
                     "linkContent": "@Chris",
                     "cursor": "/cursors/cursorChercheur.svg"
                 }
@@ -141,30 +129,26 @@
             "image": "/characters/chercheur.png",
             "firstContent": "Quelle que soit la taille de l'écran, il garantit une expérience utilisateur sans faille. Chaque site s'adapte à tous les supports, du mobile au grand écran.",
             "secondContent": "Il fait attention à chaque breakpoint attentivement, on ne pourra pas le reprendre à l'inspection!",
-            "logoBg": "blueDark",
+            "logoClass": "h-[310px] w-[310px] rounded-full bg-blueDark flex items-center justify-center",
             "logo": "/characters/logoChercheur.svg",
             "logoWidth": 88,
             "logoHeight": 124
         },
         {
-            "containerBg": "mustardLight",
+            "containerClass": "bg-mustardLight text-bgBlack max-w-[1440px] mx-auto rounded-[60px] p-12 pt-16 relative overflow-hidden",
             "role": "Easter egg",
             "point": "/3 pts",
             "title": "Le maître des secrets",
             "link": [
                 {
                     "href": "https://x.com/maislina_",
-                    "linkBg": "mustardMid",
-                    "linkColor": "mustardLight",
-                    "linkBorder": "--mustardDark",
+                    "linkClass": "bg-mustardMid font-inter font-semibold text-xs text-mustardLight px-3 py-1.5 rounded-roundedLink shadow-[inset_0_0_0_2px_rgba(var(--mustardDark))]",
                     "linkContent": "@Lina",
                     "cursor": "/cursors/cursorSecrets.svg"
                 },
                 {
                     "href": "https://x.com/LLCoolChris_",
-                    "linkBg": "mustardMid",
-                    "linkColor": "mustardLight",
-                    "linkBorder": "--mustardDark",
+                    "linkClass": "bg-mustardMid font-inter font-semibold text-xs text-mustardLight px-3 py-1.5 rounded-roundedLink shadow-[inset_0_0_0_2px_rgba(var(--mustardDark))]",
                     "linkContent": "@Chris",
                     "cursor": "/cursors/cursorSecrets.svg"
                 }
@@ -172,30 +156,26 @@
             "image": "/characters/secrets.png",
             "firstContent": "Derrière une ligne de code bien choisie se cache un secret bien gardé. Il glisse la surprise qui surprendra les utilisateurs les plus curieux.",
             "secondContent": "Dev attentif aux comportements utilisateurs il saura cacher l'Easter Egg au meilleur endroit.",
-            "logoBg": "mustardMid",
+            "logoClass": "h-[310px] w-[310px] rounded-full bg-mustardMid flex items-center justify-center",
             "logo": "/characters/logoSecrets.svg",
             "logoWidth": 160,
             "logoHeight": 145
         },
         {
-            "containerBg": "orangeLight",
+            "containerClass": "bg-orangeLight text-bgBlack max-w-[1440px] mx-auto rounded-[60px] p-12 pt-16 relative overflow-hidden",
             "role": "Big boss",
             "point": "/ Infinite pts",
             "title": "Le sur-boosted",
             "link": [
                 {
                     "href": "https://x.com/maislina_",
-                    "linkBg": "orangeMid",
-                    "linkColor": "bgWhite",
-                    "linkBorder": "--orangeDark",
+                    "linkClass": "bg-orangeMid font-inter font-semibold text-xs text-bgWhite px-3 py-1.5 rounded-roundedLink shadow-[inset_0_0_0_2px_rgba(var(--orangeDark))]",
                     "linkContent": "@Lina",
                     "cursor": "/cursors/cursorBoosted.svg"
                 },
                 {
                     "href": "https://x.com/LLCoolChris_",
-                    "linkBg": "orangeMid",
-                    "linkColor": "bgWhite",
-                    "linkBorder": "--orangeDark",
+                    "linkClass": "bg-orangeMid font-inter font-semibold text-xs text-bgWhite px-3 py-1.5 rounded-roundedLink shadow-[inset_0_0_0_2px_rgba(var(--orangeDark))]",
                     "linkContent": "@Chris",
                     "cursor": "/cursors/cursorBoosted.svg"
                 }
@@ -203,7 +183,7 @@
             "image": "/characters/surBoosted.png",
             "firstContent": "Il excelle dans tous les domaines, alliant design, propreté de code, réactivité, animations fluides et créativité cachée. Un vrai prodige qui a su briller dans chaque aspect du développement.",
             "secondContent": "Ce dev aux multitalents a reçu la standing ovation du jury.",
-            "logoBg": "orangeMid",
+            "logoClass": "h-[310px] w-[310px] rounded-full bg-orangeMid flex items-center justify-center",
             "logo": "/characters/logoSurBoosted.svg",
             "logoWidth": 90,
             "logoHeight": 82
