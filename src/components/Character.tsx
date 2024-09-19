@@ -2,30 +2,28 @@ import Image from "next/image";
 import CharacterLink from "./CharacterLink";
 
 interface CharacterProps {
-    containerBg: string,
+    containerClass: string,
     role: string,
     point: string,
     title: string,
     link: {
         href: string,
-        linkBg: string,
-        linkColor: string,
-        linkBorder: string,
+        linkClass: string,
         linkContent: string,
         cursor: string
     }[],
     image: string,
     firstContent: string,
     secondContent: string,
-    logoBg: string,
+    logoClass: string,
     logo: string,
     logoWidth: number,
     logoHeight: number
 }
 
-export default function Character({ containerBg, role, point, title, link, image, firstContent, secondContent, logoBg, logo, logoWidth, logoHeight }: CharacterProps) {
+export default function Character({ containerClass, role, point, title, link, image, firstContent, secondContent, logoClass, logo, logoWidth, logoHeight }: CharacterProps) {
     return (
-        <article className={`bg-${containerBg} max-w-[1440px] mx-auto rounded-[60px] p-12 pt-16 relative overflow-hidden`}>
+        <article className={containerClass}>
             <div className="flex justify-between pl-12 mb-14">
                 <div className="flex gap-x-[150px]">
                     <div>
@@ -39,9 +37,7 @@ export default function Character({ containerBg, role, point, title, link, image
                         <CharacterLink
                             key={item.linkContent}
                             href={item.href}
-                            linkBg={item.linkBg}
-                            linkColor={item.linkColor}
-                            linkBorder={item.linkBorder}
+                            linkClass={item.linkClass}
                             linkContent={item.linkContent}
                             cursor={item.cursor}
                         />
@@ -64,7 +60,7 @@ export default function Character({ containerBg, role, point, title, link, image
                 </div>
             </div>
             <div className="h-[412px] w-[412px] flex items-center justify-center absolute bottom-[-100px] right-[-85px]">
-                <div className={`h-[310px] w-[310px] rounded-full bg-${logoBg} flex items-center justify-center`}>
+                <div className={logoClass}>
                     <Image
                         src={logo}
                         alt=""

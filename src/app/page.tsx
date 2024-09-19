@@ -27,14 +27,14 @@ export default function Home() {
                     <HeroCard />
                 </section>
                 <section>
-                    <h2 className="font-inter font-bold text-[220px] tracking-[8px] leading-none mb-[100px]">
+                    <h2 className="font-inter font-bold text-[220px] text-bgBlack tracking-[8px] leading-none mb-[100px]">
                         <span className="tracking-normal mr-2.5">&lt;A&gt;</span>
                         Front les
                     </h2>
                     {data.characters.map(character => (
                         <Character
                             key={character.role}
-                            containerBg={character.containerBg}
+                            containerClass={character.containerClass}
                             role={character.role}
                             point={character.point}
                             title={character.title}
@@ -42,7 +42,7 @@ export default function Home() {
                             image={character.image}
                             firstContent={character.firstContent}
                             secondContent={character.secondContent}
-                            logoBg={character.logoBg}
+                            logoClass={character.logoClass}
                             logo={character.logo}
                             logoWidth={character.logoWidth}
                             logoHeight={character.logoHeight}

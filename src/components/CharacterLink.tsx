@@ -1,18 +1,17 @@
 import Image from "next/image"
+import Link from "next/link"
 
 interface CharacterLinkProps {
     href: string,
-    linkBg: string,
-    linkColor: string,
-    linkBorder: string,
+    linkClass: string,
     linkContent: string,
     cursor: string
 }
 
-export default function CharacterLink({ href, linkBg, linkColor, linkBorder, linkContent, cursor }: CharacterLinkProps) {
+export default function CharacterLink({ href, linkClass, linkContent, cursor }: CharacterLinkProps) {
     return (
         <div className="relative">
-            <a href={href} className={`bg-${linkBg} font-inter font-semibold text-xs text-${linkColor} px-3 py-1.5 rounded-[2px_19px_19px_25px] shadow-[inset_0_0_0_2px_rgba(var(${linkBorder}))]`} target="blank">{linkContent}</a>
+            <Link href={href} className={linkClass} target="blank">{linkContent}</Link>
             <Image
                 src={cursor}
                 alt="Curseur"
