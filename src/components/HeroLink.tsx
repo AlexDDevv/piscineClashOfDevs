@@ -27,7 +27,14 @@ export default function HeroLink({ showEasterEgg }: { showEasterEgg: boolean }) 
                 ))
             ) : (
                 data.easterEggLink.map(link => (
-                    <div key={link.content} className={link.classDiv}>
+                    <motion.div
+                        key={link.content}
+                        className={link.classDiv}
+                        initial={{ scale: 0, opacity: 0 }}
+                        animate={{ scale: 1, opacity: 1 }}
+                        exit={{ scale: 1, opacity: 1 }}
+                        transition={{ duration: 0.5, ease: "easeInOut", delay: 2 }}
+                    >
                         <a href={link.href} className={link.classLink} target="blank">{link.content}</a>
                         <Image
                             src={link.cursor}
@@ -36,7 +43,7 @@ export default function HeroLink({ showEasterEgg }: { showEasterEgg: boolean }) 
                             height={13}
                             className={link.classCursor}
                         />
-                    </div>
+                    </motion.div>
                 ))
             )}
         </>
