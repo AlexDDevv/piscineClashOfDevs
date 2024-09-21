@@ -1,24 +1,41 @@
-import Image from "next/image";
-import logoTheme from "../assets/img/logoTheme.svg"
+"use client"
+import { useState, useEffect } from "react";
+import ScrollBtn from "./ScrollBtn";
+import { motion, useScroll } from "framer-motion"
 
 export default function Header() {
+    const { scrollYProgress } = useScroll();
+    const [scrollProgress, setScrollProgress] = useState(0);
+
+    useEffect(() => {
+        const updateProgress = () => setScrollProgress(Math.floor(scrollYProgress.get() * 100));
+
+        const unsubscribe = scrollYProgress.on("change", updateProgress);
+
+        return () => unsubscribe();
+    }, [scrollYProgress]);
+
     return (
-        <header className="flex items-center justify-between max-[1440px]:px-8 pt-5 max-w-[1440px] mx-auto mb-36">
-            <div className="bg-bgBlack font-bold text-xs text-purpleLight w-[91px] h-[27px] flex items-center justify-center uppercase rounded-[80px] rotate-6">
-                La piscine
-            </div>
-            <div className="font-bold text-xs text-bgBlack">
-                0%
-            </div>
-            <div className="bg-bgBlack rounded-[63px] w-[54px] h-[27px] relative cursor-pointer">
-                <div className="bg-bgBeige rounded-full w-[23px] h-[23px] flex items-center justify-center switchTheme">
-                    <Image
-                        src={logoTheme}
-                        alt="Logo pour changer le thème du site"
-                        className="w-[15px] h-[15px]"
-                    />
+        <motion.header
+            className="w-full fixed top-0 left-0 right-0 pt-5 z-50"
+            initial={{ translateY: "-100px", opacity: 0, scale: 0 }}
+            animate={{ translateY: 0, opacity: 1, scale: 1 }}
+            exit={{ translateY: 0, opacity: 1, scale: 1 }}
+            transition={{ duration: 0.75, ease: "easeInOut" }}
+        >
+            <div className="flex items-center justify-between max-w-[1440px] w-full max-[1440px]:px-8 mx-auto">
+                <div className="bg-bgBlack font-bold text-xs text-purpleLight w-[91px] h-[27px] flex items-center justify-center uppercase rounded-[80px] rotate-6 cursor-pointer">
+                    La piscine
                 </div>
+                <div className="font-bold text-xs text-bgBlack">
+                    <span>{scrollProgress}%</span>
+                </div>
+                <ScrollBtn />
             </div>
-        </header>
+            <motion.div
+                className="bg-bgBlack h-1 absolute top-0 origin-[0%] w-full"
+                style={{ scaleX: scrollYProgress }}
+            />
+        </motion.header>
     )
 }
