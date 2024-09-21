@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Image from "next/image";
 import card from "../assets/img/card.svg"
 import HeroLink from './HeroLink';
@@ -9,10 +9,16 @@ import { motion } from "framer-motion"
 
 export default function HeroCard() {
     const [showEasterEgg, setShowEasterEgg] = useState(false)
+    const [isFirstRender, setIsFirstRender] = useState(true);
+
+    useEffect(() => {
+        setIsFirstRender(false);
+    }, []);
 
     const handleEasterEgg = () => {
         setShowEasterEgg(!showEasterEgg)
     }
+
     return (
         <>
             {!showEasterEgg ? (
@@ -21,7 +27,7 @@ export default function HeroCard() {
                     initial={{ translateX: "500px", opacity: 0 }}
                     animate={{ translateX: 0, opacity: 1 }}
                     exit={{ translateX: 0, opacity: 1 }}
-                    transition={{ duration: 0.75, ease: "easeInOut", delay: 1.5 }}
+                    transition={{ duration: 0.75, ease: "easeInOut", delay: isFirstRender ? 1.5 : 0 }}
                 >
                     <div>
                         <Image
@@ -47,14 +53,13 @@ export default function HeroCard() {
                     />
                 </motion.div>
             ) : (
-                <motion.div
-                    className="relative"
-                    initial={{ translateX: "500px", opacity: 0 }}
-                    animate={{ translateX: 0, opacity: 1 }}
-                    exit={{ translateX: 0, opacity: 1 }}
-                    transition={{ duration: 0.75, ease: "easeInOut", delay: 1.5 }}
-                >
-                    <div>
+                <div className="relative">
+                    <motion.div
+                        initial={{ scale: 0, rotate: 0, opacity: 0 }}
+                        animate={{ scale: 1, rotate: "720deg", opacity: 1 }}
+                        exit={{ scale: 1, rotate: 0, opacity: 1 }}
+                        transition={{ duration: 0.75, ease: "easeInOut" }}
+                    >
                         <Image
                             src={reverseCard}
                             alt="Easter egg"
@@ -66,11 +71,11 @@ export default function HeroCard() {
                             className="rounded-md posGif cursor-pointer"
                             onClick={handleEasterEgg}
                         />
-                    </div>
+                    </motion.div>
                     <HeroLink
                         showEasterEgg={showEasterEgg}
                     />
-                </motion.div>
+                </div>
             )}
         </>
     )
