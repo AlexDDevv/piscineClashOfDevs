@@ -5,6 +5,7 @@ import card from "../assets/img/card.svg"
 import HeroLink from './HeroLink';
 import reverseCard from "../assets/img/reverseCard.svg"
 import easterEgg from "../assets/img/easterEgg.gif"
+import { motion } from "framer-motion"
 
 export default function HeroCard() {
     const [showEasterEgg, setShowEasterEgg] = useState(false)
@@ -15,7 +16,13 @@ export default function HeroCard() {
     return (
         <>
             {!showEasterEgg ? (
-                <div className="relative">
+                <motion.div
+                    className="relative"
+                    initial={{ translateX: "500px", opacity: 0 }}
+                    animate={{ translateX: 0, opacity: 1 }}
+                    exit={{ translateX: 0, opacity: 1 }}
+                    transition={{ duration: 0.75, ease: "easeInOut", delay: 1.5 }}
+                >
                     <div>
                         <Image
                             src={card}
@@ -38,9 +45,15 @@ export default function HeroCard() {
                     <HeroLink
                         showEasterEgg={showEasterEgg}
                     />
-                </div>
+                </motion.div>
             ) : (
-                <div className="relative">
+                <motion.div
+                    className="relative"
+                    initial={{ translateX: "500px", opacity: 0 }}
+                    animate={{ translateX: 0, opacity: 1 }}
+                    exit={{ translateX: 0, opacity: 1 }}
+                    transition={{ duration: 0.75, ease: "easeInOut", delay: 1.5 }}
+                >
                     <div>
                         <Image
                             src={reverseCard}
@@ -57,7 +70,7 @@ export default function HeroCard() {
                     <HeroLink
                         showEasterEgg={showEasterEgg}
                     />
-                </div>
+                </motion.div>
             )}
         </>
     )
