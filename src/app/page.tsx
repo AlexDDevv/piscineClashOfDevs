@@ -58,7 +58,7 @@ export default function Home() {
                 </section>
                 <section className="max-[1440px]:px-8">
                     <h2 className="font-inter font-bold text-[220px] text-bgBlack tracking-[8px] leading-none mb-[100px]">
-                        <span className="tracking-normal mr-2.5">&lt;A&gt;</span>
+                        <span className="tracking-normal mr-2.5">{"<A>"}</span>
                         Front les
                     </h2>
                     {data.characters.map(character => (
