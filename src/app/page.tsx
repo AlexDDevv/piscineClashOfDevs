@@ -1,4 +1,5 @@
 "use client"
+import { useState } from "react"
 import Image from "next/image";
 import Header from "@/components/Header";
 import logoTitle from "../assets/img/logoTitle.svg"
@@ -10,6 +11,12 @@ import logoFinalSection from "../assets/img/logoTitleFinalSection.svg"
 import { motion } from "framer-motion"
 
 export default function Home() {
+    const [showModal, setShowModal] = useState(false)
+
+    const handleModal = () => {
+        setShowModal(!showModal)
+    }
+
     const translateInMotion = {
         initial: { translateX: "-500px", opacity: 0 },
         animate: { translateX: 0, opacity: 1 },
@@ -19,7 +26,9 @@ export default function Home() {
 
     return (
         <>
-            <Header />
+            <Header
+                handleModal={handleModal}
+            />
             <main>
                 <section className="flex items-center justify-between max-w-[1440px] mx-auto max-[1440px]:px-8 mb-40 mt-52 overflow-hidden">
                     <div>
@@ -85,7 +94,7 @@ export default function Home() {
                             />
                         </div>
                         <div className="relative z-50">
-                            <button type="button" className="font-inter font-bold text-bgBlack text-sm bg-bgBeige rounded-[60px] py-5 px-[51px]">Enter Next Level</button>
+                            <button type="button" className="font-inter font-bold text-bgBlack text-sm bg-bgBeige rounded-[60px] py-5 px-[51px]" onClick={handleModal}>Enter Next Level</button>
                             {data.logoCTA.map(logo => (
                                 <Image
                                     key={logo.alt}
@@ -101,6 +110,14 @@ export default function Home() {
                 </section>
                 <Footer />
             </main>
+            {showModal && (
+                <>
+                    <div className="bg-bgWhite border border-bgBlack rounded-md fixed top-1/2 left-1/2 z-50 p-10" style={{ transform: "translate(-50%,-50%)" }}>
+                        <p className="font-inter font-bold uppercase text-bgBlack text-center">Je n'ai pas eu le temps, je mise tout sur l'Easter Egg</p>
+                    </div>
+                    <div className="bg-bgBlack/80 w-full h-full fixed top-0 left-0 z-40" onClick={handleModal}></div>
+                </>
+            )}
         </>
     );
 }
