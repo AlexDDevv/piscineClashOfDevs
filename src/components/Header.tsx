@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import ScrollBtn from "./ScrollBtn";
 import { motion, useScroll, useSpring } from "framer-motion"
 
-export default function Header() {
+export default function Header({ handleModal }: { handleModal: () => void }) {
     const { scrollYProgress } = useScroll();
     const [scrollProgress, setScrollProgress] = useState(0);
 
@@ -36,7 +36,9 @@ export default function Header() {
                 <div className="font-bold text-xs text-bgBlack">
                     <span>{scrollProgress}%</span>
                 </div>
-                <ScrollBtn />
+                <ScrollBtn
+                    handleModal={handleModal}
+                />
             </div>
             <motion.div
                 className="bg-bgBlack h-1 absolute top-0 origin-[0%] w-full"
