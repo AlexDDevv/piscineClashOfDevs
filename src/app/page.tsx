@@ -51,14 +51,14 @@ export default function Home() {
                                 height={80}
                                 className="w-auto h-auto"
                             />
-                            <p className="font-semibold text-bgBlack text-[115px] italic leading-none">l'emporte!</p>
+                            <p className="font-semibold text-bgBlack text-[115px] italic leading-none">{`l'emporte!`}</p>
                         </motion.div>
                     </div>
                     <HeroCard />
                 </section>
                 <section className="max-[1440px]:px-8">
                     <h2 className="font-inter font-bold text-[220px] text-bgBlack tracking-[8px] leading-none mb-[100px]">
-                        <span className="tracking-normal mr-2.5">{"<A>"}</span>
+                        <span className="tracking-normal mr-2.5">{`<A>`}</span>
                         Front les
                     </h2>
                     {data.characters.map(character => (
@@ -113,7 +113,7 @@ export default function Home() {
             {showModal && (
                 <>
                     <div className="bg-bgWhite border border-bgBlack rounded-md fixed top-1/2 left-1/2 z-50 p-10" style={{ transform: "translate(-50%,-50%)" }}>
-                        <p className="font-inter font-bold uppercase text-bgBlack text-center">Je n'ai pas eu le temps, je mise tout sur l'Easter Egg</p>
+                        <p className="font-inter font-bold uppercase text-bgBlack text-center">{`Je n'ai pas eu le temps, je mise tout sur l'Easter Egg`}</p>
                     </div>
                     <div className="bg-bgBlack/80 w-full h-full fixed top-0 left-0 z-40" onClick={handleModal}></div>
                 </>
