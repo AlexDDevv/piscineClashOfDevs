@@ -1,3 +1,4 @@
+"use client"
 import Image from "next/image";
 import Header from "@/components/Header";
 import logoTitle from "../assets/img/logoTitle.svg"
@@ -6,16 +7,34 @@ import data from "../data/data.json"
 import Character from "@/components/Character";
 import Footer from "@/components/Footer"
 import logoFinalSection from "../assets/img/logoTitleFinalSection.svg"
+import { motion } from "framer-motion"
 
 export default function Home() {
+    const translateInMotion = {
+        initial: { translateX: "-500px", opacity: 0 },
+        animate: { translateX: 0, opacity: 1 },
+        exit: { translateX: 0, opacity: 1 },
+        transition: { duration: 0.75, ease: "easeInOut" }
+    }
+
     return (
         <>
             <Header />
             <main>
-                <section className="flex items-center justify-between max-w-[1440px] mx-auto max-[1440px]:px-8 mb-40">
+                <section className="flex items-center justify-between max-w-[1440px] mx-auto max-[1440px]:px-8 mb-40 mt-52 overflow-hidden">
                     <div>
-                        <h1 className="font-semibold text-bgBlack text-[115px] leading-none mb-2.5">Que le plus fort,</h1>
-                        <div className="flex items-center gap-x-10 pl-[26px]">
+                        <motion.h1
+                            className="font-semibold text-bgBlack text-[115px] leading-none mb-2.5"
+                            {...translateInMotion}
+                            transition={{ ...translateInMotion.transition, delay: 0.75 }}
+                        >
+                            Que le plus fort,
+                        </motion.h1>
+                        <motion.div
+                            className="flex items-center gap-x-10 pl-[26px]"
+                            {...translateInMotion}
+                            transition={{ ...translateInMotion.transition, delay: 1.25 }}
+                        >
                             <Image
                                 src={logoTitle}
                                 alt="Logo"
@@ -24,7 +43,7 @@ export default function Home() {
                                 className="w-auto h-auto"
                             />
                             <p className="font-semibold text-bgBlack text-[115px] italic leading-none">l'emporte!</p>
-                        </div>
+                        </motion.div>
                     </div>
                     <HeroCard />
                 </section>
@@ -50,35 +69,35 @@ export default function Home() {
                             logoHeight={character.logoHeight}
                         />
                     ))}
-                </section>
-                <section className="bg-bgBlack max-w-[1440px] mx-auto max-[1440px]:px-8 rounded-[60px] pt-[252px] pb-20 px-[102px] flex flex-col items-center justify-center mb-10">
-                    <div className="mb-[230px] relative">
-                        <span className="font-inter font-medium text-xs text-bgWhite opacity-80 mb-[80px] block">/ FINALE02</span>
-                        <h2 className="font-inter font-semibold text-[115px] text-bgBeige leading-[123px]">
-                            <span className="mr-[100px]">Click</span>
-                            <span className="mr-[100px]">Me</span>
-                            <span className="mr-[200px]">?</span>
-                            Might enter the finals
-                        </h2>
-                        <Image
-                            src={logoFinalSection}
-                            alt=""
-                            className="absolute bottom-[-10px] left-[80%]"
-                        />
-                    </div>
-                    <div className="relative z-50">
-                        <button type="button" className="font-inter font-bold text-bgBlack text-sm bg-bgBeige rounded-[60px] py-5 px-[51px]">Enter Next Level</button>
-                        {data.logoCTA.map(logo => (
+                    <article className="bg-bgBlack max-w-[1440px] mx-auto rounded-[60px] pt-[252px] pb-20 px-[102px] flex flex-col items-center justify-center mb-10 sticky top-0 z-10">
+                        <div className="mb-[230px] relative">
+                            <span className="font-inter font-medium text-xs text-bgWhite opacity-80 mb-[80px] block">/ FINALE02</span>
+                            <h2 className="font-inter font-semibold text-[115px] text-bgBeige leading-[123px]">
+                                <span className="mr-[100px]">Click</span>
+                                <span className="mr-[100px]">Me</span>
+                                <span className="mr-[200px]">?</span>
+                                Might enter the finals
+                            </h2>
                             <Image
-                                key={logo.alt}
-                                src={logo.src}
-                                alt={logo.alt}
-                                width={logo.width}
-                                height={logo.height}
-                                className={logo.class}
+                                src={logoFinalSection}
+                                alt=""
+                                className="absolute bottom-[-10px] left-[80%]"
                             />
-                        ))}
-                    </div>
+                        </div>
+                        <div className="relative z-50">
+                            <button type="button" className="font-inter font-bold text-bgBlack text-sm bg-bgBeige rounded-[60px] py-5 px-[51px]">Enter Next Level</button>
+                            {data.logoCTA.map(logo => (
+                                <Image
+                                    key={logo.alt}
+                                    src={logo.src}
+                                    alt={logo.alt}
+                                    width={logo.width}
+                                    height={logo.height}
+                                    className={logo.class}
+                                />
+                            ))}
+                        </div>
+                    </article>
                 </section>
                 <Footer />
             </main>
