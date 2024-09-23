@@ -1,6 +1,5 @@
 import Image from "next/image";
 import CharacterLink from "./CharacterLink";
-import { motion } from "framer-motion"
 
 interface ContentFragment {
     before?: string;
@@ -31,17 +30,8 @@ interface CharacterProps {
 export default function Character({
     containerClass, role, point, title, link, image, firstContent, secondContent, logoClass, logo, logoWidth, logoHeight,
 }: CharacterProps) {
-    const fadeInMotion = {
-        initial: { opacity: 0 },
-        whileInView: { opacity: 1 },
-        transition: { duration: 0.5, ease: "easeInOut" }
-    }
-
     return (
-        <motion.article
-            className={`${containerClass} sticky top-0 z-10`}
-            {...fadeInMotion}
-        >
+        <article className={`${containerClass} sticky top-0 z-10`}>
             <div className="flex justify-between pl-12 mb-14">
                 <div className="flex gap-x-[150px]">
                     <div>
@@ -98,6 +88,6 @@ export default function Character({
                     />
                 </div>
             </div>
-        </motion.article>
+        </article>
     );
 }
