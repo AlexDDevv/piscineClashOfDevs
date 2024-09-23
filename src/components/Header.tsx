@@ -1,11 +1,17 @@
 "use client"
 import { useState, useEffect } from "react";
 import ScrollBtn from "./ScrollBtn";
-import { motion, useScroll } from "framer-motion"
+import { motion, useScroll, useSpring } from "framer-motion"
 
 export default function Header() {
     const { scrollYProgress } = useScroll();
     const [scrollProgress, setScrollProgress] = useState(0);
+
+    const scaleX = useSpring(scrollYProgress, {
+        stiffness: 100,
+        damping: 30,
+        restDelta: 0.001
+    });
 
     useEffect(() => {
         const updateProgress = () => setScrollProgress(Math.floor(scrollYProgress.get() * 100));
@@ -34,7 +40,7 @@ export default function Header() {
             </div>
             <motion.div
                 className="bg-bgBlack h-1 absolute top-0 origin-[0%] w-full"
-                style={{ scaleX: scrollYProgress }}
+                style={{ scaleX }}
             />
         </motion.header>
     )
